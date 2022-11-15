@@ -5,12 +5,12 @@
         <title>django form</title>
     </head>
     <body>
-        <form method="post">
-            {%csrf_token%}
+        <form method="post"> <!--метод для получения данных, еще есть GET но это другое-->
+            {%csrf_token%} <!--'это сертификат для безопасности, надо вставлять если метод ПОСТ'-->
          <table>
-         {{form}}
+         {{form}} <!--это обращение к классу в котором созданы текстбоксы для ввода, это что бы не ковырятся в ХТМЛ-->
          </table>
-         <input type="submit" name="Go" value="send">
+         <input type="submit" name="Go" value="send"> <!--кнопка ввода-->
          </form>
     </body>
 </html>
